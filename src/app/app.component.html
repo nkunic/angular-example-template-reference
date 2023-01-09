@@ -1,0 +1,17 @@
+<h1>ANGULAR Template reference</h1>
+<p>naming certain elements</p>
+<p>use it to refere on this element in other parts of the template</p>
+
+<input #formInput />
+
+<p>can be injected</p>
+<p>
+  We get the curret value using template reference. Then we pass to the method
+  the current value of the input. As the uset types in the input we pass the new
+  value to the component. Component takes this new value and automaticlly update
+  the template.
+</p>
+
+<h2>Input value: {{ inputValue }}</h2>
+
+<input [value]="inputValue" #formInput (keyup)="onKeyUp(formInput.value)" />
