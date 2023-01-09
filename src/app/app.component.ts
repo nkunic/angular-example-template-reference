@@ -7,9 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent  {
 
-  inputValue = 'Old input value';
+  // Data object
+  data = {
+    title: 'Old title',
+  };
 
-  onKeyUp(newInputValue:string) {
-    this.inputValue = newInputValue;
+  onKeyUp(newTitle:string) {
+    this.data.title = newTitle;
   }
 }

@@ -2,8 +2,6 @@
 <p>naming certain elements</p>
 <p>use it to refere on this element in other parts of the template</p>
 
-<input #formInput />
-
 <p>can be injected</p>
 <p>
   We get the curret value using template reference. Then we pass to the method
@@ -12,6 +10,10 @@
   the template.
 </p>
 
-<h2>Input value: {{ inputValue }}</h2>
+<h2>Input value: {{ data.title }}</h2>
 
-<input [value]="inputValue" #formInput (keyup)="onKeyUp(formInput.value)" />
+<input 
+  [value]="data.title" 
+  #titleInput 
+  (keyup)="onKeyUp(titleInput.value)" 
+/>
