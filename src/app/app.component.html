@@ -1,8 +1,9 @@
 <h1>ANGULAR Template reference</h1>
-<p>naming certain elements</p>
-<p>use it to refere on this element in other parts of the template</p>
+<p>Naming certain elements</p>
+<p>Use it to refere on this element in other parts of the template</p>
 
-<p>can be injected</p>
+<h2>Syncrinisation between Model and the View</h2>
+
 <p>
   We get the curret value using template reference. Then we pass to the method
   the current value of the input. As the uset types in the input we pass the new
@@ -10,8 +11,13 @@
   the template.
 </p>
 
-<h2>Input value: {{ data.title }}</h2>
+<p>
+Input value: <strong>{{ data.title }}</strong>
+</p>
+
 
 <input [value]="data.title" #titleInput (keyup)="onKeyUp(titleInput.value)" />
 
-<p>Direct reflecting in the View modification of the data!</p>
+<p>Direct reflecting in the View modification of the data. Only changed data gets updated!</p>
+<p>Safe because it doesn't interprete it as html or js..it uses html code escaping and shows it as string!</p>
+<p>can be injected</p>
