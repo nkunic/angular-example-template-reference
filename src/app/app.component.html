@@ -12,8 +12,6 @@
 
 <h2>Input value: {{ data.title }}</h2>
 
-<input 
-  [value]="data.title" 
-  #titleInput 
-  (keyup)="onKeyUp(titleInput.value)" 
-/>
+<input [value]="data.title" #titleInput (keyup)="onKeyUp(titleInput.value)" />
+
+<p>Direct reflecting in the View modification of the data!</p>
